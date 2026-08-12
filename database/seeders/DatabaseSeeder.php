@@ -20,11 +20,13 @@ class DatabaseSeeder extends Seeder
         $this->call(RolesAndPermissionsSeeder::class);
 
         // Seed test user with User role
-        $testUser = User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'user@example.com',
-            'password' => Hash::make('password'),
-        ]);
+        $testUser = User::firstOrCreate(
+            ['email' => 'user@example.com'],
+            [
+                'name' => 'Admin User',
+                'password' => Hash::make('password'),
+            ]
+        );
         $testUser->assignRole('User');
     }
 }

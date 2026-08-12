@@ -72,6 +72,9 @@ echo "Generating application key..."
 echo "Running database migrations..."
 ./vendor/bin/sail artisan migrate --force
 
+echo "Run migrations and seeding..."
+./vendor/bin/sail artisan db:seed --force
+
 # 6. Install npm packages and build frontend assets
 echo "Installing npm packages..."
 ./vendor/bin/sail npm install
