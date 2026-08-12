@@ -7,6 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Quick Start & Setup
+
+This project uses **Laravel Sail** (Docker Compose) for its development environment. An automated setup script is provided to handle the entire bootstrap process including:
+- Creating/configuring the `.env` file (avoids local port conflicts).
+- Installing PHP/Composer dependencies inside a temporary Docker container (no local PHP/Composer installation required on your host).
+- Starting the Docker services.
+- Running database migrations.
+- Installing npm packages and compiling frontend assets.
+
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
+
+### Installation
+
+1. Run the automated setup script:
+   ```bash
+   ./setup.sh
+   ```
+2. Access the application at [http://localhost](http://localhost).
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
