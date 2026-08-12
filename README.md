@@ -30,14 +30,42 @@ If you prefer not to use Docker, switch to the dedicated branch for a direct hos
 git checkout feature/epic-without-docker
 ```
 
-Once switched, run the following commands to manually set up and start the application:
-```bash
-cp .env.example .env
-composer install
-php artisan key:generate --ansi --no-interaction
-php artisan migrate --fresh
-php artisan db:seed --force
-npm install
-npm run dev
-php artisan serve
-```
+Once switched, execute the following commands to manually configure, install, and run the application:
+
+1. **Configure Environment File**
+   Copy the example environment configuration file to create your environment configuration:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Install PHP Dependencies**
+   Install project dependencies using Composer:
+   ```bash
+   composer install
+   ```
+
+3. **Generate Application Key**
+   Generate a unique secure application key:
+   ```bash
+   php artisan key:generate --ansi --no-interaction
+   ```
+
+4. **Run Database Migrations and Seed**
+   Freshly migrate the database schema and populate it with seed data:
+   ```bash
+   php artisan migrate --fresh
+   php artisan db:seed --force
+   ```
+
+5. **Build and Serve Frontend Assets**
+   Install node dependencies and launch the Vite development server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+6. **Launch local server**
+   Start the PHP development server in a separate terminal:
+   ```bash
+   php artisan serve
+   ```
