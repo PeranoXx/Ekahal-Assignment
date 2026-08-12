@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-zinc-50: #fafafa;
+    --color-zinc-100: #f5f5f5;
+    --color-zinc-200: #e5e5e5;
+    --color-zinc-300: #d4d4d4;
+    --color-zinc-400: #a3a3a3;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #525252;
+    --color-zinc-700: #404040;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0a0a0a;
+
+    --color-accent: var(--color-neutral-800);
+    --color-accent-content: var(--color-neutral-800);
+    --color-accent-foreground: var(--color-white);
+
+    /* Colors */
+    --color-tertiary-fixed: #ffdf9e;
+    --color-primary-container: #63e7f2;
+    --color-surface-container: #e9efef;
+    --color-tertiary-fixed-dim: #efc052;
+    --color-on-secondary-container: #3e6a6d;
+    --color-on-secondary-fixed: #002022;
+    --color-on-tertiary: #ffffff;
+    --color-surface-bright: #f5fafb;
+    --color-inverse-on-surface: #ecf2f2;
+    --color-on-secondary: #ffffff;
+    --color-on-tertiary-container: #755700;
+    --color-surface-tint: #006970;
+    --color-on-surface: #171d1d;
+    --color-primary-fixed: #7af4ff;
+    --color-surface: #f5fafb;
+    --color-surface-container-highest: #dee4e4;
+    --color-on-surface-variant: #3c494a;
+    --color-secondary-fixed: #bdebef;
+    --color-on-primary-fixed: #002022;
+    --color-primary-fixed-dim: #51d8e3;
+    --color-secondary: #396569;
+    --color-surface-dim: #d5dbdb;
+    --color-on-tertiary-fixed-variant: #5b4300;
+    --color-error-container: #ffdad6;
+    --color-inverse-surface: #2b3132;
+    --color-on-primary: #ffffff;
+    --color-on-secondary-fixed-variant: #204d51;
+    --color-surface-container-low: #eff5f5;
+    --color-on-error: #ffffff;
+    --color-secondary-fixed-dim: #a1cfd3;
+    --color-on-background: #171d1d;
+    --color-secondary-container: #bae8ec;
+    --color-error: #ba1a1a;
+    --color-surface-container-lowest: #ffffff;
+    --color-background: #f5fafb;
+    --color-tertiary-container: #ffce5f;
+    --color-outline: #6c797b;
+    --color-surface-container-high: #e3e9e9;
+    --color-on-error-container: #93000a;
+    --color-primary: #006970;
+    --color-tertiary: #795900;
+    --color-on-primary-container: #00666c;
+    --color-surface-variant: #dee4e4;
+    --color-on-tertiary-fixed: #261a00;
+    --color-inverse-primary: #51d8e3;
+    --color-outline-variant: #bbc9ca;
+    --color-on-primary-fixed-variant: #004f54;
+
+    /* Border Radius */
+    --radius: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-full: 9999px;
+
+    /* Spacing */
+    --spacing-margin-desktop: 64px;
+    --spacing-xl: 40px;
+    --spacing-xs: 4px;
+    --spacing-lg: 24px;
+    --spacing-gutter: 24px;
+    --spacing-md: 16px;
+    --spacing-base: 4px;
+    --spacing-sm: 8px;
+    --spacing-margin-mobile: 16px;
+
+    /* Font Families */
+    --font-display-lg: "Hanken Grotesk", sans-serif;
+    --font-body-sm: "Inter", sans-serif;
+    --font-title-md: "Hanken Grotesk", sans-serif;
+    --font-label-caps: "JetBrains Mono", monospace;
+    --font-body-md: "Inter", sans-serif;
+    --font-body-lg: "Inter", sans-serif;
+    --font-headline-lg: "Hanken Grotesk", sans-serif;
+    --font-headline-lg-mobile: "Hanken Grotesk", sans-serif;
+
+    --font-headline: "Hanken Grotesk", sans-serif;
+    --font-display: "Hanken Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-label: "JetBrains Mono", monospace;
+
+    /* Font Sizes */
+    --text-display-lg: 48px;
+    --text-display-lg--line-height: 1.1;
+    --text-display-lg--letter-spacing: -0.02em;
+    --text-display-lg--font-weight: 700;
+
+    --text-body-sm: 14px;
+    --text-body-sm--line-height: 1.5;
+    --text-body-sm--font-weight: 400;
+
+    --text-title-md: 20px;
+    --text-title-md--line-height: 1.4;
+    --text-title-md--font-weight: 600;
+
+    --text-label-caps: 12px;
+    --text-label-caps--line-height: 1;
+    --text-label-caps--letter-spacing: 0.05em;
+    --text-label-caps--font-weight: 500;
+
+    --text-body-md: 16px;
+    --text-body-md--line-height: 1.5;
+    --text-body-md--font-weight: 400;
+
+    --text-body-lg: 18px;
+    --text-body-lg--line-height: 1.6;
+    --text-body-lg--font-weight: 400;
+
+    --text-headline-lg: 32px;
+    --text-headline-lg--line-height: 1.2;
+    --text-headline-lg--letter-spacing: -0.01em;
+    --text-headline-lg--font-weight: 600;
+
+    --text-headline-lg-mobile: 24px;
+    --text-headline-lg-mobile--line-height: 1.2;
+    --text-headline-lg-mobile--font-weight: 600;
+}
+
+@layer theme {
+    .dark {
+        --color-accent: var(--color-white);
+        --color-accent-content: var(--color-white);
+        --color-accent-foreground: var(--color-neutral-800);
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    input:focus {
+        box-shadow: inset 0 0 0 1px #ffffff;
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
