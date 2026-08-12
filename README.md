@@ -53,7 +53,7 @@ Once switched, execute the following commands to manually configure, install, an
 4. **Run Database Migrations and Seed**
    Freshly migrate the database schema and populate it with seed data:
    ```bash
-   php artisan migrate --fresh
+   php artisan migrate:fresh
    php artisan db:seed --force
    ```
 
@@ -61,7 +61,7 @@ Once switched, execute the following commands to manually configure, install, an
    Install node dependencies and launch the Vite development server:
    ```bash
    npm install
-   npm run dev
+   npm run build
    ```
 
 6. **Launch local server**
