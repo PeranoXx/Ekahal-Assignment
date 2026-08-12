@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Modules\Users\Models\User;
+use Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,7 +22,8 @@ class DatabaseSeeder extends Seeder
         // Seed test user with User role
         $testUser = User::factory()->create([
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'user@example.com',
+            'password' => Hash::make('password'),
         ]);
         $testUser->assignRole('User');
     }

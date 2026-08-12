@@ -3,6 +3,7 @@
 namespace App\Modules\Users\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Modules\RolePermission\Repositories\RolePermissionRepository;
 use App\Modules\Users\Models\User;
 use App\Modules\Users\Requests\CreateUserRequest;
 use App\Modules\Users\Requests\UpdateUserRequest;
@@ -12,17 +13,20 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
     protected UserService $userService;
+    protected RolePermissionRepository $rolePermissionRepository;
 
     /**
      * Create a new controller instance.
      */
-    public function __construct(UserService $userService)
+    public function __construct(UserService $userService,RolePermissionRepository $rolePermissionRepository)
     {
         $this->userService = $userService;
+        $this->rolePermissionRepository = $rolePermissionRepository;
     }
 
     /**
@@ -57,7 +61,8 @@ class UserController extends Controller
     {
         Gate::authorize('user-create');
 
-        return view('users.create');
+        $roles = $this->rolePermissionRepository->getAllRoles();
+        return view('users.create', compact('roles'));
     }
 
     /**
@@ -79,7 +84,9 @@ class UserController extends Controller
     {
         Gate::authorize('user-update');
 
-        return view('users.edit', compact('user'));
+        $roles = $this->rolePermissionRepository->getAllRoles();
+
+        return view('users.edit', compact('user', 'roles'));
     }
 
     /**

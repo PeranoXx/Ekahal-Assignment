@@ -47,8 +47,11 @@
             <div class="flex flex-col gap-2">
                 <label for="role" class="font-label-sm text-label-sm text-on-surface-variant">System Role</label>
                 <select id="role" name="role" class="w-full bg-surface border border-outline-variant rounded py-2 px-3 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary transition-colors focus:ring-0">
-                    <option value="User" {{ old('role', 'User') === 'User' ? 'selected' : '' }}>User (Standard permissions)</option>
-                    <option value="Admin" {{ old('role') === 'Admin' ? 'selected' : '' }}>Admin (Full permission settings)</option>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->name }}" {{ old('role', 'User') === $role->name ? 'selected' : '' }}>
+                            {{ $role->name }}
+                        </option>
+                    @endforeach
                 </select>
                 @error('role')
                     <span class="text-xs text-error mt-1">{{ $message }}</span>
