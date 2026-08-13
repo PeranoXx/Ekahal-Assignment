@@ -92,7 +92,7 @@
                     type="number" 
                     step="0.01" 
                     min="0" 
-                    prefix="$"
+                    prefix="₹"
                     placeholder="0.00" 
                     value="{{ old('unit_price', $product->unit_price) }}"
                 />

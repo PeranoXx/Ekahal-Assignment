@@ -59,7 +59,7 @@
                     blocks fontfamily fontsize | bold italic underline strikethrough | \
                     align numlist bullist | link image | table media | \
                     lineheight outdent indent | forecolor backcolor removeformat | \
-                    charmap emoticons | code fullscreen preview ',
+                    charmap emoticons ',
                 branding: false,
                 promotion: false,
                 skin: 'oxide',

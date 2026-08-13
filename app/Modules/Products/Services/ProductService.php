@@ -42,6 +42,22 @@ class ProductService
     }
 
     /**
+     * Show product requested.
+     */
+    public function showProduct(Product $product)
+    {
+        return [
+            'success' => true,
+            'product' => $product,
+            'image_url' => $product->image ? asset('storage/' . $product->image) : null,
+            'formatted_price' => '₹' . number_format($product->unit_price, 2),
+            'formatted_date' => $product->date_available ? $product->date_available->format('M d, Y') : 'N/A',
+            'created_at_formatted' => $product->created_at->format('M d, Y H:i'),
+            'updated_at_formatted' => $product->updated_at->format('M d, Y H:i'),
+        ];
+    }
+
+    /**
      * Update an existing product and replace image if uploaded.
      */
     public function updateProduct(Product $product, array $data): Product

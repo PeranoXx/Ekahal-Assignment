@@ -9,7 +9,7 @@
         <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-sm">
             <span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">space_dashboard</span>
         </div>
-        <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Welcome to InventoryOS</h2>
+        <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Welcome</h2>
         <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
             This is your workspace dashboard. Use the sidebar menu to navigate through system capabilities and manage permissions.
         </p>

@@ -75,7 +75,12 @@ echo "Running database migrations..."
 echo "Run migrations and seeding..."
 ./vendor/bin/sail artisan db:seed --force
 
-# 6. Install npm packages and build frontend assets
+# 6. Create relative storage link
+echo "Creating relative storage link..."
+rm -rf public/storage
+ln -sf ../storage/app/public public/storage
+
+# 7. Install npm packages and build frontend assets
 echo "Installing npm packages..."
 ./vendor/bin/sail npm install
 

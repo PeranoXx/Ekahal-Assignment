@@ -3,7 +3,8 @@
 namespace App\Modules\Auth\Services;
 
 use App\Modules\Users\Models\User;
-use App\Modules\Auth\Repositories\UserRepository;
+
+use App\Modules\Users\Repositories\UserRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 

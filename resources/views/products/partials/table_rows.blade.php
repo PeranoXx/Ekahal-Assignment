@@ -50,6 +50,12 @@
     <!-- Actions -->
     <td class="py-md px-lg text-right">
         <div class="flex items-center justify-end gap-2 min-h-[24px]">
+            @can('product-view')
+            <a href="{{ route('products.show', $product) }}" class="p-xs text-on-surface-variant hover:text-primary transition-colors flex items-center" title="View Details">
+                <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </a>
+            @endcan
+
             @can('product-update')
             <a href="{{ route('products.edit', $product) }}" class="p-xs text-on-surface-variant hover:text-primary transition-colors flex items-center" title="Edit">
                 <span class="material-symbols-outlined text-[18px]">edit</span>

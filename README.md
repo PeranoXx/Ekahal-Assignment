@@ -24,6 +24,16 @@ This script handles the environment configuration, PHP/Composer dependency insta
 Once the script completes, you can access the application at:
 **[http://localhost/](http://localhost/)**
 
+#### Default Credentials
+
+**Admin User:**
+- **Email:** admin@example.com
+- **Password:** password
+
+**Standard User:**
+- **Email:** test@example.com
+- **Password:** password
+
 #### Option B: Running without Docker
 If you prefer not to use Docker, switch to the dedicated branch for a direct host installation:
 ```bash

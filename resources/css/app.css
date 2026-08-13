@@ -182,3 +182,69 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+/* TinyMCE Content Rendering Styles */
+.tinymce-content h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-on-background);
+}
+.tinymce-content h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-on-background);
+}
+.tinymce-content h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-on-background);
+}
+.tinymce-content p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+.tinymce-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.tinymce-content ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.tinymce-content strong {
+    font-weight: 700;
+}
+.tinymce-content em {
+    font-style: italic;
+}
+.tinymce-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background: var(--color-surface);
+}
+.tinymce-content table, .tinymce-content th, .tinymce-content td {
+    border: 1px solid var(--color-outline-variant);
+    padding: 8px 12px;
+    text-align: left;
+}
+.tinymce-content th {
+    background: var(--color-surface-container-high);
+    font-weight: 600;
+}
+.tinymce-content blockquote {
+    border-left: 4px solid var(--color-primary);
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+    color: var(--color-on-surface-variant);
+}

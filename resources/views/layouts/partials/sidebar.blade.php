@@ -45,11 +45,11 @@
         @endrole
         <div class="h-px w-full bg-outline-variant my-xs"></div>
         
-        <a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all duration-200" href="#">
+        <a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all duration-200" href="https://github.com/PeranoXx/Ekahal-Assignment" target="_blank">
             <span class="material-symbols-outlined text-[20px]">terminal</span>
             <span class="font-label-md text-label-md">Repository</span>
         </a>
-        <a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all duration-200" href="#">
+        <a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all duration-200" href="https://github.com/PeranoXx/Ekahal-Assignment#ekahal-assignment" target="_blank">
             <span class="material-symbols-outlined text-[20px]">menu_book</span>
             <span class="font-label-md text-label-md">Documentation</span>
         </a>

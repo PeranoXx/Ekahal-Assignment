@@ -305,4 +305,45 @@ class ProductTest extends TestCase
         $this->assertEquals(15, $data['total']);
         $this->assertStringContainsString('Showing', $data['pagination']);
     }
+
+    /**
+     * Test admin can view single product details.
+     */
+    public function test_admin_can_view_single_product_details(): void
+    {
+        $admin = User::where('email', 'admin@example.com')->first();
+        
+        $product = Product::factory()->create([
+            'title' => 'Test Detail Product',
+            'slug' => 'test-detail-product',
+            'description' => '<p>Some <strong>rich</strong> text description</p>',
+            'unit_price' => 19.99,
+            'stock' => 15,
+            'status' => 'active',
+        ]);
+
+        $response = $this->actingAs($admin)
+            ->get("/products/{$product->id}");
+
+        $response->assertStatus(200);
+        $response->assertViewIs('products.show');
+        $response->assertSee('Test Detail Product');
+        $response->assertSee('test-detail-product');
+        $response->assertSee('<p>Some <strong>rich</strong> text description</p>', false);
+    }
+
+    /**
+     * Test standard user cannot view single product details.
+     */
+    public function test_standard_user_cannot_view_single_product_details(): void
+    {
+        $user = User::where('email', 'test@example.com')->first();
+        
+        $product = Product::factory()->create();
+
+        $response = $this->actingAs($user)
+            ->get("/products/{$product->id}");
+
+        $response->assertStatus(403);
+    }
 }

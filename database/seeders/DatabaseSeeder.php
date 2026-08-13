@@ -21,9 +21,9 @@ class DatabaseSeeder extends Seeder
 
         // Seed test user with User role
         $testUser = User::firstOrCreate(
-            ['email' => 'user@example.com'],
+            ['email' => 'test@example.com'],
             [
-                'name' => 'Admin User',
+                'name' => 'Test User',
                 'password' => Hash::make('password'),
             ]
         );
