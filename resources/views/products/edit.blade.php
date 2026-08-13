@@ -52,32 +52,35 @@
             <div class="grid grid-cols-1 gap-gutter">
                 <!-- Product Name -->
                 <x-input 
-                    label="PRODUCT NAME" 
+                    label="Product name" 
                     name="title" 
                     id="title"
                     type="text" 
                     placeholder="e.g. Ergonomic Office Chair" 
                     value="{{ old('title', $product->title) }}" 
                     autofocus
+                    required
                 />
 
                 <!-- Slug -->
                 <x-input 
-                    label="SLUG" 
+                    label="Slug" 
                     name="slug" 
                     id="slug"
                     type="text" 
                     placeholder="ergonomic-office-chair" 
                     value="{{ old('slug', $product->slug) }}" 
+                    required
                 />
 
                 <!-- Description -->
                 <x-tinymce 
-                    label="DESCRIPTION" 
+                    label="Description" 
                     name="description" 
                     id="description"
                     placeholder="Describe the product features, specifications, and materials..."
                     :value="old('description', $product->description)"
+                    required
                 />
             </div>
 
@@ -87,32 +90,33 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 <!-- Unit Price -->
                 <x-input 
-                    label="UNIT PRICE" 
+                    label="Unit Price" 
                     name="unit_price" 
                     type="number" 
                     step="0.01" 
-                    min="0" 
                     prefix="₹"
                     placeholder="0.00" 
                     value="{{ old('unit_price', $product->unit_price) }}"
+                    required
                 />
 
                 <!-- Stock -->
                 <x-input 
-                    label="STOCK" 
+                    label="Stock" 
                     name="stock" 
                     type="number"
-                    min="0" 
                     placeholder="0" 
                     value="{{ old('stock', $product->stock) }}"
+                    required
                 />
 
                 <!-- Date Available -->
                 <x-input 
-                    label="DATE AVAILABLE" 
+                    label="Date Available" 
                     name="date_available" 
                     type="date" 
                     value="{{ old('date_available', $product->date_available ? $product->date_available->format('Y-m-d') : '') }}"
+                    required
                 />
             </div>
 

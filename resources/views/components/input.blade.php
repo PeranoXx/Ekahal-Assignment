@@ -6,6 +6,7 @@
     'value' => null,
     'help' => null,
     'prefix' => null,
+    'required' => false,
 ])
 
 @php
@@ -16,7 +17,7 @@
 <div class="flex flex-col gap-sm">
     @if($label)
         <label class="font-label-sm text-label-sm text-on-surface" for="{{ $id }}">
-            {{ $label }}
+            {{ $label }}@if($required)<span class="text-error ml-0.5">*</span>@endif
         </label>
     @endif
 

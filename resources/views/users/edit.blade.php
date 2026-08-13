@@ -25,6 +25,7 @@
                 placeholder="Enter user's name" 
                 value="{{ old('name', $user->name) }}" 
                 autofocus
+                required
             />
 
             <!-- Email Input -->
@@ -34,6 +35,7 @@
                 type="email" 
                 placeholder="Enter email address" 
                 value="{{ old('email', $user->email) }}" 
+                required
             />
 
             <!-- Password Input -->
@@ -42,6 +44,7 @@
                 name="password" 
                 type="password" 
                 placeholder="Leave blank to keep current password" 
+                required
             />
 
             <!-- Role Input -->

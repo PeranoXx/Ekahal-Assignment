@@ -50,6 +50,7 @@
                     placeholder="e.g. Ergonomic Office Chair" 
                     value="{{ old('title') }}" 
                     autofocus
+                    required
                 />
 
                 <!-- Slug -->
@@ -61,6 +62,7 @@
                     placeholder="ergonomic-office-chair" 
                     value="{{ old('slug') }}" 
                     help="The unique URL identifier for this product. Auto-generated from title."
+                    required
                 />
 
                 <!-- Description -->
@@ -70,6 +72,7 @@
                     id="description"
                     placeholder="Describe the product features, specifications, and materials..."
                     :value="old('description')"
+                    required
                 />
             </div>
 
@@ -83,10 +86,10 @@
                     name="unit_price" 
                     type="number" 
                     step="0.01" 
-                    min="0" 
                     prefix="₹"
                     placeholder="0.00" 
                     value="{{ old('unit_price') }}"
+                    required
                 />
 
                 <!-- Stock -->
@@ -94,9 +97,9 @@
                     label="Stock" 
                     name="stock" 
                     type="number"
-                    min="0" 
                     placeholder="0" 
                     value="{{ old('stock', 0) }}"
+                    required
                 />
 
                 <!-- Date Available -->
@@ -105,6 +108,7 @@
                     name="date_available" 
                     type="date" 
                     value="{{ old('date_available', date('Y-m-d')) }}"
+                    required
                 />
             </div>
 

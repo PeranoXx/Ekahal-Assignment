@@ -24,6 +24,7 @@
                 placeholder="Enter user's name" 
                 value="{{ old('name') }}" 
                 autofocus
+                required
             />
 
             <!-- Email Input -->
@@ -33,6 +34,7 @@
                 type="email" 
                 placeholder="Enter email address" 
                 value="{{ old('email') }}" 
+                required
             />
 
             <!-- Password Input -->
@@ -41,6 +43,7 @@
                 name="password" 
                 type="password" 
                 placeholder="Set a password (min. 8 characters)" 
+                required
             />
 
             <!-- Role Input -->
