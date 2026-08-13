@@ -10,7 +10,7 @@ Route::get('/', function () {
 // Guest Routes
 Route::middleware('guest')->group(function () {
     Route::get('/signin', [AuthController::class, 'showSignin'])->name('login');
-    Route::post('/signin', [AuthController::class, 'signin'])->middleware('throttle:login');
+    Route::post('/signin', [AuthController::class, 'signin']);
 
     Route::get('/signup', [AuthController::class, 'showSignup'])->name('signup');
     Route::post('/signup', [AuthController::class, 'signup']);
