@@ -10,12 +10,13 @@ class UserRepository
     public function paginate(int $perPage = 10, ?string $search = null, ?string $status = 'all', ?string $sortBy = null, ?string $sortOrder = 'asc'): LengthAwarePaginator
     {
         if ($status === 'deleted') {
-            $query = User::onlyTrashed();
+            $query = User::with('roles')->onlyTrashed();
         } elseif ($status === 'active') {
-            $query = User::query();
+            $query = User::with('roles');
         } else {
-            $query = User::withTrashed();
+            $query = User::with('roles')->withTrashed();
         }
+        
 
         if (!empty($search)) {
             $query->where(function ($q) use ($search) {

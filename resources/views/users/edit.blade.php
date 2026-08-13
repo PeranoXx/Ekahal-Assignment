@@ -44,7 +44,6 @@
                 name="password" 
                 type="password" 
                 placeholder="Leave blank to keep current password" 
-                required
             />
 
             <!-- Role Input -->

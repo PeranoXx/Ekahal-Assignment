@@ -10,7 +10,7 @@ Route::get('/', function () {
 // Guest Routes
 Route::middleware('guest')->group(function () {
     Route::get('/signin', [AuthController::class, 'showSignin'])->name('login');
-    Route::post('/signin', [AuthController::class, 'signin']);
+    Route::post('/signin', [AuthController::class, 'signin'])->middleware('throttle:login');
 
     Route::get('/signup', [AuthController::class, 'showSignup'])->name('signup');
     Route::post('/signup', [AuthController::class, 'signup']);
@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/create', [UserController::class, 'create'])->name('users.create');
         Route::post('/', [UserController::class, 'store'])->name('users.store');
         Route::get('/{user}', [UserController::class, 'show'])->name('users.show');
-        Route::get('/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
+        Route::get('/{user}/edit', [UserController::class, 'edit'])->name('users.edit')->withTrashed();
         Route::put('/{user}', [UserController::class, 'update'])->name('users.update');
         Route::delete('/{user}', [UserController::class, 'destroy'])->name('users.destroy');
     });

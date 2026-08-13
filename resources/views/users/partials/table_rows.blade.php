@@ -25,7 +25,7 @@
     <td class="py-md px-lg text-on-surface-variant">
         {{ $user->email }}
     </td>
-    <td class="py-md px-lg text-on-surface-variant">{{ $user->hasRole('Admin') ? 'Admin' : 'User' }}</td>
+    <td class="py-md px-lg text-on-surface-variant">{{ $user->roles->pluck('name')->implode(', ')}}</td>
     <td class="py-md px-lg">
         @if ($user->trashed())
             <span class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-error-container text-on-error-container font-label-caps text-[10px]">

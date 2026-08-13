@@ -27,7 +27,7 @@
                         <span class="material-symbols-outlined text-primary text-[32px] group-hover:text-on-primary transition-colors">cloud_upload</span>
                     </div>
                     <p class="font-title-md text-body-md text-on-surface font-medium mb-xs">Upload product image</p>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant text-center">Click to browse. PNG, JPG up to 5MB.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant text-center">Click to browse. PNG, JPG up to 2MB.</p>
                 </div>
 
                 <!-- Current Image State -->
