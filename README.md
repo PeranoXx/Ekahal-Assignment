@@ -2,6 +2,16 @@
 
 This repository contains the Ekahal Assignment. Below are the steps to clone, set up, and run the application.
 
+> [!NOTE]
+> **UI Design**
+>
+> The user interface for this project was generated using Google Stitch, an AI-powered UI design tool that helps create modern and structured application interfaces.
+>
+> * **Google Stitch**: [https://stitch.withgoogle.com/](https://stitch.withgoogle.com/?utm_source=chatgpt.com)
+> * **Ekahal Assignment UI Design**: [View the Ekahal Assignment UI on Google Stitch](https://stitch.withgoogle.com/projects/14963736868981363540?utm_source=chatgpt.com)
+>
+> The Google Stitch design was used as the visual foundation for the project, helping define the overall layout, user interface structure, and design direction before implementing the frontend.
+
 ## Installation Flow
 
 ### 1. Clone the Repository
